@@ -10,6 +10,7 @@ function App() {
 const inpRef=useRef("");
   const [data, setdata]=useState("not working");
   useEffect(()=>{
+    console.log("frounted..done")
     axios.get("http://localhost:4000/api/get").then(res=>setdata(res.data.data)).catch(e=>console.log(e.errors));
   },[])
   const handler=(e)=>{
